@@ -1,0 +1,1143 @@
+Prefix(:=<http://www.example.org/petshop#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
+
+
+Ontology(<http://www.example.org/petshop>
+
+Declaration(Class(:Accessory))
+Declaration(Class(:ActivityLevel))
+Declaration(Class(:Additive))
+Declaration(Class(:Bed))
+Declaration(Class(:Bowl))
+Declaration(Class(:Brand))
+Declaration(Class(:Breed))
+Declaration(Class(:Brush))
+Declaration(Class(:Cashier))
+Declaration(Class(:Cat))
+Declaration(Class(:CatBreed))
+Declaration(Class(:CatProduct))
+Declaration(Class(:CoatType))
+Declaration(Class(:CollarAndLeash))
+Declaration(Class(:DentalCondition))
+Declaration(Class(:DigestiveCondition))
+Declaration(Class(:Dog))
+Declaration(Class(:DogBreed))
+Declaration(Class(:DogProduct))
+Declaration(Class(:DryFood))
+Declaration(Class(:FleaAndTickControl))
+Declaration(Class(:FoodAllergy))
+Declaration(Class(:Grain))
+Declaration(Class(:GrainFreeFood))
+Declaration(Class(:GroomingProduct))
+Declaration(Class(:HealthCareProduct))
+Declaration(Class(:HealthCondition))
+Declaration(Class(:Ingredient))
+Declaration(Class(:JointCondition))
+Declaration(Class(:LifeStage))
+Declaration(Class(:Lifestyle))
+Declaration(Class(:LivingEnvironment))
+Declaration(Class(:NeuterStatus))
+Declaration(Class(:Person))
+Declaration(Class(:Pet))
+Declaration(Class(:PetFood))
+Declaration(Class(:PetSize))
+Declaration(Class(:Pet_characteristics))
+Declaration(Class(:PrescriptionDiet))
+Declaration(Class(:Product))
+Declaration(Class(:ProteinSource))
+Declaration(Class(:SeniorFood))
+Declaration(Class(:Shampoo))
+Declaration(Class(:SkinAndCoatCondition))
+Declaration(Class(:StoreManager))
+Declaration(Class(:Supplement))
+Declaration(Class(:Toy))
+Declaration(Class(:Treat))
+Declaration(Class(:UrinaryCondition))
+Declaration(Class(:VegetableAndFruit))
+Declaration(Class(:WeightCondition))
+Declaration(Class(:WeightControlFood))
+Declaration(Class(:WetFood))
+Declaration(ObjectProperty(:breedCoatType))
+Declaration(ObjectProperty(:breedSize))
+Declaration(ObjectProperty(:goesWellWith))
+Declaration(ObjectProperty(:hasActivityLevel))
+Declaration(ObjectProperty(:hasBrand))
+Declaration(ObjectProperty(:hasBreed))
+Declaration(ObjectProperty(:hasCharacteristic))
+Declaration(ObjectProperty(:hasCoatType))
+Declaration(ObjectProperty(:hasCondition))
+Declaration(ObjectProperty(:hasIngredient))
+Declaration(ObjectProperty(:hasLifeStage))
+Declaration(ObjectProperty(:hasLivingEnvironment))
+Declaration(ObjectProperty(:hasMainProtein))
+Declaration(ObjectProperty(:hasNeuterStatus))
+Declaration(ObjectProperty(:hasRiskOf))
+Declaration(ObjectProperty(:hasSize))
+Declaration(ObjectProperty(:isOwnedBy))
+Declaration(ObjectProperty(:isPredisposedTo))
+Declaration(ObjectProperty(:isRecommendedFor))
+Declaration(ObjectProperty(:isSuitableFor))
+Declaration(ObjectProperty(:isSuitableForPet))
+Declaration(ObjectProperty(:isSuitableForSize))
+Declaration(ObjectProperty(:isUnsafeFor))
+Declaration(ObjectProperty(:matchesLifeStageOf))
+Declaration(ObjectProperty(:matchesLifestyleOf))
+Declaration(ObjectProperty(:owns))
+Declaration(ObjectProperty(:recommendedForPet))
+Declaration(ObjectProperty(:targetsCharacteristic))
+Declaration(ObjectProperty(:targetsLifeStage))
+Declaration(ObjectProperty(:targetsLifestyle))
+Declaration(ObjectProperty(:triggeredBy))
+Declaration(DataProperty(:hasAge))
+Declaration(DataProperty(:hasBodyWeight))
+Declaration(DataProperty(:hasCaloriePerKg))
+Declaration(DataProperty(:hasDailyCalorieNeed))
+Declaration(DataProperty(:hasExpiryDate))
+Declaration(DataProperty(:hasName))
+Declaration(DataProperty(:hasPrice))
+Declaration(DataProperty(:hasRER))
+Declaration(DataProperty(:hasWeight))
+Declaration(DataProperty(:isGrainFree))
+Declaration(NamedIndividual(:AdultDogLambGrainFree))
+Declaration(NamedIndividual(:BrandA))
+Declaration(NamedIndividual(:BrandB))
+Declaration(NamedIndividual(:Buddy))
+Declaration(NamedIndividual(:DeSheddingBrush))
+Declaration(NamedIndividual(:DentalChew))
+Declaration(NamedIndividual(:IndoorCatChickenLight))
+Declaration(NamedIndividual(:JointSupplement))
+Declaration(NamedIndividual(:KidneyCareCatWet))
+Declaration(NamedIndividual(:KittenSalmonDry))
+Declaration(NamedIndividual(:LargeDogBeefDry))
+Declaration(NamedIndividual(:Leo))
+Declaration(NamedIndividual(:LightDogChickenWet))
+Declaration(NamedIndividual(:Mali))
+Declaration(NamedIndividual(:Momo))
+Declaration(NamedIndividual(:Nida))
+Declaration(NamedIndividual(:RopeToyLarge))
+Declaration(NamedIndividual(:SeniorCatSalmonDry))
+Declaration(NamedIndividual(:SeniorSmallDogChicken))
+Declaration(NamedIndividual(:Somchai))
+Declaration(NamedIndividual(:StainlessBowl))
+Declaration(NamedIndividual(:adult))
+Declaration(NamedIndividual(:arthritis))
+Declaration(NamedIndividual(:beagle))
+Declaration(NamedIndividual(:beef))
+Declaration(NamedIndividual(:beefAllergy))
+Declaration(NamedIndividual(:britishShorthair))
+Declaration(NamedIndividual(:carrot))
+Declaration(NamedIndividual(:cat_generic))
+Declaration(NamedIndividual(:chicken))
+Declaration(NamedIndividual(:chickenAllergy))
+Declaration(NamedIndividual(:corn))
+Declaration(NamedIndividual(:dentalPlaque))
+Declaration(NamedIndividual(:dog_generic))
+Declaration(NamedIndividual(:drySkin))
+Declaration(NamedIndividual(:fishAllergy))
+Declaration(NamedIndividual(:goldenRetriever))
+Declaration(NamedIndividual(:hairball))
+Declaration(NamedIndividual(:highActivity))
+Declaration(NamedIndividual(:hipDysplasia))
+Declaration(NamedIndividual(:indoor))
+Declaration(NamedIndividual(:intact))
+Declaration(NamedIndividual(:juvenile))
+Declaration(NamedIndividual(:kidneyDisease))
+Declaration(NamedIndividual(:labrador))
+Declaration(NamedIndividual(:lamb))
+Declaration(NamedIndividual(:large))
+Declaration(NamedIndividual(:longHair))
+Declaration(NamedIndividual(:lowActivity))
+Declaration(NamedIndividual(:maineCoon))
+Declaration(NamedIndividual(:medium))
+Declaration(NamedIndividual(:moderateActivity))
+Declaration(NamedIndividual(:neutered))
+Declaration(NamedIndividual(:obesity))
+Declaration(NamedIndividual(:outdoor))
+Declaration(NamedIndividual(:persian))
+Declaration(NamedIndividual(:pomeranian))
+Declaration(NamedIndividual(:pumpkin))
+Declaration(NamedIndividual(:rice))
+Declaration(NamedIndividual(:salmon))
+Declaration(NamedIndividual(:senior))
+Declaration(NamedIndividual(:sensitiveStomach))
+Declaration(NamedIndividual(:shihTzu))
+Declaration(NamedIndividual(:shortHair))
+Declaration(NamedIndividual(:siamese))
+Declaration(NamedIndividual(:skinAllergy))
+Declaration(NamedIndividual(:small))
+Declaration(NamedIndividual(:taurine))
+Declaration(NamedIndividual(:underweight))
+Declaration(NamedIndividual(:urinaryStones))
+Declaration(NamedIndividual(:wheat))
+Declaration(NamedIndividual(:wheatAllergy))
+Declaration(Datatype(xsd:date))
+############################
+#   Object Properties
+############################
+
+# Object Property: :breedCoatType (:breedCoatType)
+
+ObjectPropertyDomain(:breedCoatType :Breed)
+ObjectPropertyRange(:breedCoatType :CoatType)
+
+# Object Property: :breedSize (:breedSize)
+
+ObjectPropertyDomain(:breedSize :DogBreed)
+ObjectPropertyRange(:breedSize :PetSize)
+
+# Object Property: :goesWellWith (:goesWellWith)
+
+SymmetricObjectProperty(:goesWellWith)
+ObjectPropertyDomain(:goesWellWith :Product)
+ObjectPropertyRange(:goesWellWith :Product)
+
+# Object Property: :hasActivityLevel (:hasActivityLevel)
+
+SubObjectPropertyOf(:hasActivityLevel :hasCharacteristic)
+FunctionalObjectProperty(:hasActivityLevel)
+ObjectPropertyRange(:hasActivityLevel :ActivityLevel)
+
+# Object Property: :hasBrand (:hasBrand)
+
+FunctionalObjectProperty(:hasBrand)
+ObjectPropertyDomain(:hasBrand :Product)
+ObjectPropertyRange(:hasBrand :Brand)
+
+# Object Property: :hasBreed (:hasBreed)
+
+SubObjectPropertyOf(:hasBreed :hasCharacteristic)
+FunctionalObjectProperty(:hasBreed)
+ObjectPropertyRange(:hasBreed :Breed)
+
+# Object Property: :hasCharacteristic (:hasCharacteristic)
+
+ObjectPropertyDomain(:hasCharacteristic :Pet)
+ObjectPropertyRange(:hasCharacteristic :Pet_characteristics)
+
+# Object Property: :hasCoatType (:hasCoatType)
+
+SubObjectPropertyOf(:hasCoatType :hasCharacteristic)
+FunctionalObjectProperty(:hasCoatType)
+ObjectPropertyRange(:hasCoatType :CoatType)
+
+# Object Property: :hasCondition (:hasCondition)
+
+ObjectPropertyDomain(:hasCondition :Pet)
+ObjectPropertyRange(:hasCondition :HealthCondition)
+
+# Object Property: :hasIngredient (:hasIngredient)
+
+ObjectPropertyDomain(:hasIngredient :PetFood)
+ObjectPropertyRange(:hasIngredient :Ingredient)
+
+# Object Property: :hasLifeStage (:hasLifeStage)
+
+SubObjectPropertyOf(:hasLifeStage :hasCharacteristic)
+FunctionalObjectProperty(:hasLifeStage)
+ObjectPropertyRange(:hasLifeStage :LifeStage)
+
+# Object Property: :hasLivingEnvironment (:hasLivingEnvironment)
+
+SubObjectPropertyOf(:hasLivingEnvironment :hasCharacteristic)
+FunctionalObjectProperty(:hasLivingEnvironment)
+ObjectPropertyRange(:hasLivingEnvironment :LivingEnvironment)
+
+# Object Property: :hasMainProtein (:hasMainProtein)
+
+SubObjectPropertyOf(:hasMainProtein :hasIngredient)
+ObjectPropertyDomain(:hasMainProtein :PetFood)
+ObjectPropertyRange(:hasMainProtein :ProteinSource)
+
+# Object Property: :hasNeuterStatus (:hasNeuterStatus)
+
+SubObjectPropertyOf(:hasNeuterStatus :hasCharacteristic)
+FunctionalObjectProperty(:hasNeuterStatus)
+ObjectPropertyRange(:hasNeuterStatus :NeuterStatus)
+
+# Object Property: :hasRiskOf (:hasRiskOf)
+
+ObjectPropertyDomain(:hasRiskOf :Pet)
+ObjectPropertyRange(:hasRiskOf :HealthCondition)
+
+# Object Property: :hasSize (:hasSize)
+
+SubObjectPropertyOf(:hasSize :hasCharacteristic)
+FunctionalObjectProperty(:hasSize)
+ObjectPropertyRange(:hasSize :PetSize)
+
+# Object Property: :isOwnedBy (:isOwnedBy)
+
+InverseObjectProperties(:isOwnedBy :owns)
+ObjectPropertyDomain(:isOwnedBy :Pet)
+
+# Object Property: :isPredisposedTo (:isPredisposedTo)
+
+ObjectPropertyDomain(:isPredisposedTo :Breed)
+ObjectPropertyRange(:isPredisposedTo :HealthCondition)
+
+# Object Property: :isRecommendedFor (:isRecommendedFor)
+
+ObjectPropertyDomain(:isRecommendedFor :Product)
+ObjectPropertyRange(:isRecommendedFor :HealthCondition)
+
+# Object Property: :isSuitableFor (:isSuitableFor)
+
+ObjectPropertyDomain(:isSuitableFor :Product)
+ObjectPropertyRange(:isSuitableFor :Pet)
+
+# Object Property: :isSuitableForPet (:isSuitableForPet)
+
+ObjectPropertyDomain(:isSuitableForPet :Product)
+ObjectPropertyRange(:isSuitableForPet :Pet)
+
+# Object Property: :isSuitableForSize (:isSuitableForSize)
+
+SubObjectPropertyOf(:isSuitableForSize :targetsCharacteristic)
+ObjectPropertyRange(:isSuitableForSize :PetSize)
+
+# Object Property: :isUnsafeFor (:isUnsafeFor)
+
+ObjectPropertyDomain(:isUnsafeFor :PetFood)
+ObjectPropertyRange(:isUnsafeFor :Pet)
+
+# Object Property: :matchesLifeStageOf (:matchesLifeStageOf)
+
+ObjectPropertyDomain(:matchesLifeStageOf :PetFood)
+ObjectPropertyRange(:matchesLifeStageOf :Pet)
+
+# Object Property: :matchesLifestyleOf (:matchesLifestyleOf)
+
+ObjectPropertyDomain(:matchesLifestyleOf :Product)
+ObjectPropertyRange(:matchesLifestyleOf :Pet)
+
+# Object Property: :owns (:owns)
+
+ObjectPropertyRange(:owns :Pet)
+
+# Object Property: :recommendedForPet (:recommendedForPet)
+
+ObjectPropertyDomain(:recommendedForPet :Product)
+ObjectPropertyRange(:recommendedForPet :Pet)
+
+# Object Property: :targetsCharacteristic (:targetsCharacteristic)
+
+ObjectPropertyDomain(:targetsCharacteristic :Product)
+ObjectPropertyRange(:targetsCharacteristic :Pet_characteristics)
+
+# Object Property: :targetsLifeStage (:targetsLifeStage)
+
+SubObjectPropertyOf(:targetsLifeStage :targetsCharacteristic)
+ObjectPropertyRange(:targetsLifeStage :LifeStage)
+
+# Object Property: :targetsLifestyle (:targetsLifestyle)
+
+SubObjectPropertyOf(:targetsLifestyle :targetsCharacteristic)
+ObjectPropertyRange(:targetsLifestyle :Lifestyle)
+
+# Object Property: :triggeredBy (:triggeredBy)
+
+ObjectPropertyDomain(:triggeredBy :FoodAllergy)
+ObjectPropertyRange(:triggeredBy :Ingredient)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :hasAge (:hasAge)
+
+FunctionalDataProperty(:hasAge)
+DataPropertyDomain(:hasAge ObjectUnionOf(:Person :Pet))
+DataPropertyRange(:hasAge xsd:integer)
+
+# Data Property: :hasBodyWeight (:hasBodyWeight)
+
+FunctionalDataProperty(:hasBodyWeight)
+DataPropertyDomain(:hasBodyWeight :Pet)
+DataPropertyRange(:hasBodyWeight xsd:decimal)
+
+# Data Property: :hasCaloriePerKg (:hasCaloriePerKg)
+
+DataPropertyDomain(:hasCaloriePerKg :PetFood)
+DataPropertyRange(:hasCaloriePerKg xsd:decimal)
+
+# Data Property: :hasDailyCalorieNeed (:hasDailyCalorieNeed)
+
+DataPropertyDomain(:hasDailyCalorieNeed :Pet)
+DataPropertyRange(:hasDailyCalorieNeed xsd:decimal)
+
+# Data Property: :hasExpiryDate (:hasExpiryDate)
+
+DataPropertyDomain(:hasExpiryDate :PetFood)
+DataPropertyRange(:hasExpiryDate xsd:date)
+
+# Data Property: :hasName (:hasName)
+
+DataPropertyDomain(:hasName ObjectUnionOf(:Person :Pet :Product))
+DataPropertyRange(:hasName xsd:string)
+
+# Data Property: :hasPrice (:hasPrice)
+
+FunctionalDataProperty(:hasPrice)
+DataPropertyDomain(:hasPrice :Product)
+DataPropertyRange(:hasPrice xsd:decimal)
+
+# Data Property: :hasRER (:hasRER)
+
+DataPropertyDomain(:hasRER :Pet)
+DataPropertyRange(:hasRER xsd:decimal)
+
+# Data Property: :hasWeight (:hasWeight)
+
+DataPropertyDomain(:hasWeight :Product)
+DataPropertyRange(:hasWeight xsd:decimal)
+
+# Data Property: :isGrainFree (:isGrainFree)
+
+DataPropertyDomain(:isGrainFree :PetFood)
+DataPropertyRange(:isGrainFree xsd:boolean)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Accessory (:Accessory)
+
+SubClassOf(:Accessory :Product)
+
+# Class: :ActivityLevel (:ActivityLevel)
+
+SubClassOf(:ActivityLevel :Lifestyle)
+
+# Class: :Additive (:Additive)
+
+SubClassOf(:Additive :Ingredient)
+
+# Class: :Bed (:Bed)
+
+SubClassOf(:Bed :Accessory)
+
+# Class: :Bowl (:Bowl)
+
+SubClassOf(:Bowl :Accessory)
+
+# Class: :Brand (:Brand)
+
+SubClassOf(:Brand owl:Thing)
+
+# Class: :Breed (:Breed)
+
+SubClassOf(:Breed :Pet_characteristics)
+
+# Class: :Brush (:Brush)
+
+SubClassOf(:Brush :GroomingProduct)
+
+# Class: :Cashier (:Cashier)
+
+SubClassOf(:Cashier :Person)
+
+# Class: :Cat (:Cat)
+
+SubClassOf(:Cat :Pet)
+DisjointClasses(:Cat :Dog)
+
+# Class: :CatBreed (:CatBreed)
+
+SubClassOf(:CatBreed :Breed)
+DisjointClasses(:CatBreed :DogBreed)
+
+# Class: :CatProduct (:CatProduct)
+
+EquivalentClasses(:CatProduct ObjectIntersectionOf(:Product ObjectSomeValuesFrom(:isSuitableFor :Cat)))
+SubClassOf(:CatProduct :Product)
+
+# Class: :CoatType (:CoatType)
+
+SubClassOf(:CoatType :Pet_characteristics)
+
+# Class: :CollarAndLeash (:CollarAndLeash)
+
+SubClassOf(:CollarAndLeash :Accessory)
+
+# Class: :DentalCondition (:DentalCondition)
+
+SubClassOf(:DentalCondition :HealthCondition)
+
+# Class: :DigestiveCondition (:DigestiveCondition)
+
+SubClassOf(:DigestiveCondition :HealthCondition)
+
+# Class: :Dog (:Dog)
+
+SubClassOf(:Dog :Pet)
+
+# Class: :DogBreed (:DogBreed)
+
+SubClassOf(:DogBreed :Breed)
+
+# Class: :DogProduct (:DogProduct)
+
+EquivalentClasses(:DogProduct ObjectIntersectionOf(:Product ObjectSomeValuesFrom(:isSuitableFor :Dog)))
+SubClassOf(:DogProduct :Product)
+
+# Class: :DryFood (:DryFood)
+
+SubClassOf(:DryFood :PetFood)
+
+# Class: :FleaAndTickControl (:FleaAndTickControl)
+
+SubClassOf(:FleaAndTickControl :HealthCareProduct)
+
+# Class: :FoodAllergy (:FoodAllergy)
+
+SubClassOf(:FoodAllergy :HealthCondition)
+
+# Class: :Grain (:Grain)
+
+SubClassOf(:Grain :Ingredient)
+
+# Class: :GrainFreeFood (:GrainFreeFood)
+
+EquivalentClasses(:GrainFreeFood ObjectIntersectionOf(:PetFood DataHasValue(:isGrainFree "true"^^xsd:boolean)))
+SubClassOf(:GrainFreeFood :PetFood)
+
+# Class: :GroomingProduct (:GroomingProduct)
+
+SubClassOf(:GroomingProduct :Product)
+
+# Class: :HealthCareProduct (:HealthCareProduct)
+
+SubClassOf(:HealthCareProduct :Product)
+
+# Class: :HealthCondition (:HealthCondition)
+
+SubClassOf(:HealthCondition owl:Thing)
+
+# Class: :Ingredient (:Ingredient)
+
+SubClassOf(:Ingredient owl:Thing)
+
+# Class: :JointCondition (:JointCondition)
+
+SubClassOf(:JointCondition :HealthCondition)
+
+# Class: :LifeStage (:LifeStage)
+
+SubClassOf(:LifeStage :Pet_characteristics)
+
+# Class: :Lifestyle (:Lifestyle)
+
+SubClassOf(:Lifestyle :Pet_characteristics)
+
+# Class: :LivingEnvironment (:LivingEnvironment)
+
+SubClassOf(:LivingEnvironment :Lifestyle)
+
+# Class: :NeuterStatus (:NeuterStatus)
+
+SubClassOf(:NeuterStatus :Lifestyle)
+
+# Class: :Person (:Person)
+
+SubClassOf(:Person owl:Thing)
+
+# Class: :Pet (:Pet)
+
+SubClassOf(:Pet owl:Thing)
+
+# Class: :PetFood (:PetFood)
+
+SubClassOf(:PetFood :Product)
+
+# Class: :PetSize (:PetSize)
+
+SubClassOf(:PetSize :Pet_characteristics)
+
+# Class: :Pet_characteristics (:Pet_characteristics)
+
+SubClassOf(:Pet_characteristics owl:Thing)
+
+# Class: :PrescriptionDiet (:PrescriptionDiet)
+
+SubClassOf(:PrescriptionDiet :PetFood)
+
+# Class: :Product (:Product)
+
+SubClassOf(:Product owl:Thing)
+
+# Class: :ProteinSource (:ProteinSource)
+
+SubClassOf(:ProteinSource :Ingredient)
+
+# Class: :SeniorFood (:SeniorFood)
+
+EquivalentClasses(:SeniorFood ObjectIntersectionOf(:PetFood ObjectHasValue(:targetsLifeStage :senior)))
+SubClassOf(:SeniorFood :PetFood)
+
+# Class: :Shampoo (:Shampoo)
+
+SubClassOf(:Shampoo :GroomingProduct)
+
+# Class: :SkinAndCoatCondition (:SkinAndCoatCondition)
+
+SubClassOf(:SkinAndCoatCondition :HealthCondition)
+
+# Class: :StoreManager (:StoreManager)
+
+SubClassOf(:StoreManager :Person)
+
+# Class: :Supplement (:Supplement)
+
+SubClassOf(:Supplement :HealthCareProduct)
+
+# Class: :Toy (:Toy)
+
+SubClassOf(:Toy :Accessory)
+
+# Class: :Treat (:Treat)
+
+SubClassOf(:Treat :PetFood)
+
+# Class: :UrinaryCondition (:UrinaryCondition)
+
+SubClassOf(:UrinaryCondition :HealthCondition)
+
+# Class: :VegetableAndFruit (:VegetableAndFruit)
+
+SubClassOf(:VegetableAndFruit :Ingredient)
+
+# Class: :WeightCondition (:WeightCondition)
+
+SubClassOf(:WeightCondition :HealthCondition)
+
+# Class: :WeightControlFood (:WeightControlFood)
+
+EquivalentClasses(:WeightControlFood ObjectIntersectionOf(:PetFood ObjectSomeValuesFrom(:isRecommendedFor :WeightCondition)))
+SubClassOf(:WeightControlFood :PetFood)
+
+# Class: :WetFood (:WetFood)
+
+SubClassOf(:WetFood :PetFood)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :AdultDogLambGrainFree (:AdultDogLambGrainFree)
+
+ClassAssertion(:DryFood :AdultDogLambGrainFree)
+ObjectPropertyAssertion(:hasBrand :AdultDogLambGrainFree :BrandB)
+ObjectPropertyAssertion(:hasIngredient :AdultDogLambGrainFree :pumpkin)
+ObjectPropertyAssertion(:hasMainProtein :AdultDogLambGrainFree :lamb)
+ObjectPropertyAssertion(:isRecommendedFor :AdultDogLambGrainFree :chickenAllergy)
+ObjectPropertyAssertion(:isRecommendedFor :AdultDogLambGrainFree :skinAllergy)
+ObjectPropertyAssertion(:isSuitableFor :AdultDogLambGrainFree :dog_generic)
+ObjectPropertyAssertion(:targetsLifeStage :AdultDogLambGrainFree :adult)
+DataPropertyAssertion(:hasCaloriePerKg :AdultDogLambGrainFree "3500.0"^^xsd:decimal)
+DataPropertyAssertion(:hasName :AdultDogLambGrainFree "Adult Dog Lamb Grain-Free 3 kg")
+DataPropertyAssertion(:hasPrice :AdultDogLambGrainFree "890.0"^^xsd:decimal)
+DataPropertyAssertion(:isGrainFree :AdultDogLambGrainFree "true"^^xsd:boolean)
+
+# Individual: :BrandA (:BrandA)
+
+ClassAssertion(:Brand :BrandA)
+
+# Individual: :BrandB (:BrandB)
+
+ClassAssertion(:Brand :BrandB)
+
+# Individual: :Buddy (:Buddy)
+
+ClassAssertion(:Dog :Buddy)
+ObjectPropertyAssertion(:hasActivityLevel :Buddy :highActivity)
+ObjectPropertyAssertion(:hasBreed :Buddy :labrador)
+ObjectPropertyAssertion(:hasCondition :Buddy :chickenAllergy)
+ObjectPropertyAssertion(:hasLivingEnvironment :Buddy :outdoor)
+ObjectPropertyAssertion(:hasNeuterStatus :Buddy :intact)
+DataPropertyAssertion(:hasAge :Buddy "4"^^xsd:integer)
+DataPropertyAssertion(:hasBodyWeight :Buddy "30.0"^^xsd:decimal)
+DataPropertyAssertion(:hasName :Buddy "Buddy")
+
+# Individual: :DeSheddingBrush (:DeSheddingBrush)
+
+ClassAssertion(:Brush :DeSheddingBrush)
+ObjectPropertyAssertion(:hasBrand :DeSheddingBrush :BrandA)
+ObjectPropertyAssertion(:isRecommendedFor :DeSheddingBrush :hairball)
+ObjectPropertyAssertion(:isSuitableFor :DeSheddingBrush :cat_generic)
+ObjectPropertyAssertion(:isSuitableFor :DeSheddingBrush :dog_generic)
+DataPropertyAssertion(:hasName :DeSheddingBrush "De-shedding Brush")
+DataPropertyAssertion(:hasPrice :DeSheddingBrush "290.0"^^xsd:decimal)
+
+# Individual: :DentalChew (:DentalChew)
+
+ClassAssertion(:Treat :DentalChew)
+ObjectPropertyAssertion(:hasBrand :DentalChew :BrandB)
+ObjectPropertyAssertion(:hasMainProtein :DentalChew :chicken)
+ObjectPropertyAssertion(:isRecommendedFor :DentalChew :dentalPlaque)
+ObjectPropertyAssertion(:isSuitableFor :DentalChew :dog_generic)
+ObjectPropertyAssertion(:isSuitableForSize :DentalChew :small)
+DataPropertyAssertion(:hasName :DentalChew "Dental Chew Small Dog")
+DataPropertyAssertion(:hasPrice :DentalChew "180.0"^^xsd:decimal)
+
+# Individual: :IndoorCatChickenLight (:IndoorCatChickenLight)
+
+ClassAssertion(:DryFood :IndoorCatChickenLight)
+ObjectPropertyAssertion(:hasBrand :IndoorCatChickenLight :BrandB)
+ObjectPropertyAssertion(:hasIngredient :IndoorCatChickenLight :pumpkin)
+ObjectPropertyAssertion(:hasIngredient :IndoorCatChickenLight :rice)
+ObjectPropertyAssertion(:hasMainProtein :IndoorCatChickenLight :chicken)
+ObjectPropertyAssertion(:isRecommendedFor :IndoorCatChickenLight :hairball)
+ObjectPropertyAssertion(:isRecommendedFor :IndoorCatChickenLight :obesity)
+ObjectPropertyAssertion(:isSuitableFor :IndoorCatChickenLight :cat_generic)
+ObjectPropertyAssertion(:targetsLifeStage :IndoorCatChickenLight :adult)
+ObjectPropertyAssertion(:targetsLifeStage :IndoorCatChickenLight :senior)
+ObjectPropertyAssertion(:targetsLifestyle :IndoorCatChickenLight :indoor)
+ObjectPropertyAssertion(:targetsLifestyle :IndoorCatChickenLight :neutered)
+DataPropertyAssertion(:hasCaloriePerKg :IndoorCatChickenLight "3300.0"^^xsd:decimal)
+DataPropertyAssertion(:hasName :IndoorCatChickenLight "Indoor Cat Light Chicken 2 kg")
+DataPropertyAssertion(:hasPrice :IndoorCatChickenLight "720.0"^^xsd:decimal)
+DataPropertyAssertion(:isGrainFree :IndoorCatChickenLight "false"^^xsd:boolean)
+
+# Individual: :JointSupplement (:JointSupplement)
+
+ClassAssertion(:Supplement :JointSupplement)
+ObjectPropertyAssertion(:hasBrand :JointSupplement :BrandB)
+ObjectPropertyAssertion(:isRecommendedFor :JointSupplement :arthritis)
+ObjectPropertyAssertion(:isRecommendedFor :JointSupplement :hipDysplasia)
+ObjectPropertyAssertion(:isSuitableFor :JointSupplement :cat_generic)
+ObjectPropertyAssertion(:isSuitableFor :JointSupplement :dog_generic)
+DataPropertyAssertion(:hasName :JointSupplement "Glucosamine Joint Supplement")
+DataPropertyAssertion(:hasPrice :JointSupplement "450.0"^^xsd:decimal)
+
+# Individual: :KidneyCareCatWet (:KidneyCareCatWet)
+
+ClassAssertion(:PrescriptionDiet :KidneyCareCatWet)
+ObjectPropertyAssertion(:hasBrand :KidneyCareCatWet :BrandA)
+ObjectPropertyAssertion(:hasMainProtein :KidneyCareCatWet :chicken)
+ObjectPropertyAssertion(:isRecommendedFor :KidneyCareCatWet :kidneyDisease)
+ObjectPropertyAssertion(:isSuitableFor :KidneyCareCatWet :cat_generic)
+ObjectPropertyAssertion(:targetsLifeStage :KidneyCareCatWet :senior)
+DataPropertyAssertion(:hasCaloriePerKg :KidneyCareCatWet "1100.0"^^xsd:decimal)
+DataPropertyAssertion(:hasName :KidneyCareCatWet "Kidney Care Cat Wet 85 g")
+DataPropertyAssertion(:hasPrice :KidneyCareCatWet "65.0"^^xsd:decimal)
+DataPropertyAssertion(:isGrainFree :KidneyCareCatWet "true"^^xsd:boolean)
+
+# Individual: :KittenSalmonDry (:KittenSalmonDry)
+
+ClassAssertion(:DryFood :KittenSalmonDry)
+ObjectPropertyAssertion(:hasBrand :KittenSalmonDry :BrandB)
+ObjectPropertyAssertion(:hasIngredient :KittenSalmonDry :rice)
+ObjectPropertyAssertion(:hasIngredient :KittenSalmonDry :taurine)
+ObjectPropertyAssertion(:hasMainProtein :KittenSalmonDry :salmon)
+ObjectPropertyAssertion(:isSuitableFor :KittenSalmonDry :cat_generic)
+ObjectPropertyAssertion(:targetsLifeStage :KittenSalmonDry :juvenile)
+DataPropertyAssertion(:hasCaloriePerKg :KittenSalmonDry "4000.0"^^xsd:decimal)
+DataPropertyAssertion(:hasName :KittenSalmonDry "Kitten Salmon Dry 1 kg")
+DataPropertyAssertion(:hasPrice :KittenSalmonDry "420.0"^^xsd:decimal)
+DataPropertyAssertion(:isGrainFree :KittenSalmonDry "false"^^xsd:boolean)
+
+# Individual: :LargeDogBeefDry (:LargeDogBeefDry)
+
+ClassAssertion(:DryFood :LargeDogBeefDry)
+ObjectPropertyAssertion(:hasBrand :LargeDogBeefDry :BrandB)
+ObjectPropertyAssertion(:hasIngredient :LargeDogBeefDry :corn)
+ObjectPropertyAssertion(:hasMainProtein :LargeDogBeefDry :beef)
+ObjectPropertyAssertion(:isRecommendedFor :LargeDogBeefDry :hipDysplasia)
+ObjectPropertyAssertion(:isSuitableFor :LargeDogBeefDry :dog_generic)
+ObjectPropertyAssertion(:targetsLifeStage :LargeDogBeefDry :adult)
+DataPropertyAssertion(:hasCaloriePerKg :LargeDogBeefDry "3600.0"^^xsd:decimal)
+DataPropertyAssertion(:hasName :LargeDogBeefDry "Large Breed Adult Beef 10 kg")
+DataPropertyAssertion(:hasPrice :LargeDogBeefDry "1590.0"^^xsd:decimal)
+DataPropertyAssertion(:isGrainFree :LargeDogBeefDry "false"^^xsd:boolean)
+
+# Individual: :Leo (:Leo)
+
+ClassAssertion(:Cat :Leo)
+ObjectPropertyAssertion(:hasActivityLevel :Leo :highActivity)
+ObjectPropertyAssertion(:hasBreed :Leo :siamese)
+ObjectPropertyAssertion(:hasLivingEnvironment :Leo :outdoor)
+ObjectPropertyAssertion(:hasNeuterStatus :Leo :intact)
+DataPropertyAssertion(:hasAge :Leo "2"^^xsd:integer)
+DataPropertyAssertion(:hasBodyWeight :Leo "4.0"^^xsd:decimal)
+DataPropertyAssertion(:hasName :Leo "Leo")
+
+# Individual: :LightDogChickenWet (:LightDogChickenWet)
+
+ClassAssertion(:WetFood :LightDogChickenWet)
+ObjectPropertyAssertion(:hasBrand :LightDogChickenWet :BrandA)
+ObjectPropertyAssertion(:hasIngredient :LightDogChickenWet :carrot)
+ObjectPropertyAssertion(:hasMainProtein :LightDogChickenWet :chicken)
+ObjectPropertyAssertion(:isRecommendedFor :LightDogChickenWet :obesity)
+ObjectPropertyAssertion(:isSuitableFor :LightDogChickenWet :dog_generic)
+ObjectPropertyAssertion(:targetsLifeStage :LightDogChickenWet :adult)
+ObjectPropertyAssertion(:targetsLifestyle :LightDogChickenWet :lowActivity)
+ObjectPropertyAssertion(:targetsLifestyle :LightDogChickenWet :neutered)
+DataPropertyAssertion(:hasCaloriePerKg :LightDogChickenWet "900.0"^^xsd:decimal)
+DataPropertyAssertion(:hasName :LightDogChickenWet "Light Dog Chicken Wet 400 g")
+DataPropertyAssertion(:hasPrice :LightDogChickenWet "75.0"^^xsd:decimal)
+DataPropertyAssertion(:isGrainFree :LightDogChickenWet "true"^^xsd:boolean)
+
+# Individual: :Mali (:Mali)
+
+ClassAssertion(:Cat :Mali)
+ObjectPropertyAssertion(:hasActivityLevel :Mali :lowActivity)
+ObjectPropertyAssertion(:hasBreed :Mali :persian)
+ObjectPropertyAssertion(:hasLivingEnvironment :Mali :indoor)
+ObjectPropertyAssertion(:hasNeuterStatus :Mali :neutered)
+DataPropertyAssertion(:hasAge :Mali "9"^^xsd:integer)
+DataPropertyAssertion(:hasBodyWeight :Mali "4.5"^^xsd:decimal)
+DataPropertyAssertion(:hasName :Mali "Mali")
+
+# Individual: :Momo (:Momo)
+
+ClassAssertion(:Dog :Momo)
+ObjectPropertyAssertion(:hasActivityLevel :Momo :lowActivity)
+ObjectPropertyAssertion(:hasBreed :Momo :shihTzu)
+ObjectPropertyAssertion(:hasLivingEnvironment :Momo :indoor)
+ObjectPropertyAssertion(:hasNeuterStatus :Momo :neutered)
+DataPropertyAssertion(:hasAge :Momo "10"^^xsd:integer)
+DataPropertyAssertion(:hasBodyWeight :Momo "6.0"^^xsd:decimal)
+DataPropertyAssertion(:hasName :Momo "Momo")
+
+# Individual: :Nida (:Nida)
+
+ObjectPropertyAssertion(:owns :Nida :Buddy)
+ObjectPropertyAssertion(:owns :Nida :Momo)
+DataPropertyAssertion(:hasName :Nida "Nida")
+
+# Individual: :RopeToyLarge (:RopeToyLarge)
+
+ClassAssertion(:Toy :RopeToyLarge)
+ObjectPropertyAssertion(:hasBrand :RopeToyLarge :BrandB)
+ObjectPropertyAssertion(:isSuitableFor :RopeToyLarge :dog_generic)
+ObjectPropertyAssertion(:isSuitableForSize :RopeToyLarge :large)
+DataPropertyAssertion(:hasName :RopeToyLarge "Rope Toy (Large)")
+DataPropertyAssertion(:hasPrice :RopeToyLarge "150.0"^^xsd:decimal)
+
+# Individual: :SeniorCatSalmonDry (:SeniorCatSalmonDry)
+
+ClassAssertion(:DryFood :SeniorCatSalmonDry)
+ObjectPropertyAssertion(:hasBrand :SeniorCatSalmonDry :BrandA)
+ObjectPropertyAssertion(:hasIngredient :SeniorCatSalmonDry :rice)
+ObjectPropertyAssertion(:hasMainProtein :SeniorCatSalmonDry :salmon)
+ObjectPropertyAssertion(:isRecommendedFor :SeniorCatSalmonDry :hairball)
+ObjectPropertyAssertion(:isSuitableFor :SeniorCatSalmonDry :cat_generic)
+ObjectPropertyAssertion(:targetsLifeStage :SeniorCatSalmonDry :senior)
+DataPropertyAssertion(:hasCaloriePerKg :SeniorCatSalmonDry "3700.0"^^xsd:decimal)
+DataPropertyAssertion(:hasName :SeniorCatSalmonDry "Senior Cat Salmon Dry 1.5 kg")
+DataPropertyAssertion(:hasPrice :SeniorCatSalmonDry "650.0"^^xsd:decimal)
+DataPropertyAssertion(:isGrainFree :SeniorCatSalmonDry "false"^^xsd:boolean)
+
+# Individual: :SeniorSmallDogChicken (:SeniorSmallDogChicken)
+
+ClassAssertion(:DryFood :SeniorSmallDogChicken)
+ObjectPropertyAssertion(:hasBrand :SeniorSmallDogChicken :BrandB)
+ObjectPropertyAssertion(:hasIngredient :SeniorSmallDogChicken :rice)
+ObjectPropertyAssertion(:hasMainProtein :SeniorSmallDogChicken :chicken)
+ObjectPropertyAssertion(:isRecommendedFor :SeniorSmallDogChicken :dentalPlaque)
+ObjectPropertyAssertion(:isSuitableFor :SeniorSmallDogChicken :dog_generic)
+ObjectPropertyAssertion(:targetsLifeStage :SeniorSmallDogChicken :senior)
+DataPropertyAssertion(:hasCaloriePerKg :SeniorSmallDogChicken "3500.0"^^xsd:decimal)
+DataPropertyAssertion(:hasName :SeniorSmallDogChicken "Senior Small Dog Chicken 1.5 kg")
+DataPropertyAssertion(:hasPrice :SeniorSmallDogChicken "560.0"^^xsd:decimal)
+DataPropertyAssertion(:isGrainFree :SeniorSmallDogChicken "false"^^xsd:boolean)
+
+# Individual: :Somchai (:Somchai)
+
+ObjectPropertyAssertion(:owns :Somchai :Leo)
+ObjectPropertyAssertion(:owns :Somchai :Mali)
+DataPropertyAssertion(:hasName :Somchai "Somchai")
+
+# Individual: :StainlessBowl (:StainlessBowl)
+
+ClassAssertion(:Bowl :StainlessBowl)
+ObjectPropertyAssertion(:goesWellWith :StainlessBowl :KidneyCareCatWet)
+ObjectPropertyAssertion(:goesWellWith :StainlessBowl :LightDogChickenWet)
+ObjectPropertyAssertion(:hasBrand :StainlessBowl :BrandB)
+ObjectPropertyAssertion(:isSuitableFor :StainlessBowl :cat_generic)
+ObjectPropertyAssertion(:isSuitableFor :StainlessBowl :dog_generic)
+DataPropertyAssertion(:hasName :StainlessBowl "Stainless Steel Bowl")
+DataPropertyAssertion(:hasPrice :StainlessBowl "120.0"^^xsd:decimal)
+
+# Individual: :adult (:adult)
+
+ClassAssertion(:LifeStage :adult)
+
+# Individual: :arthritis (:arthritis)
+
+ClassAssertion(:JointCondition :arthritis)
+
+# Individual: :beagle (:beagle)
+
+ClassAssertion(:DogBreed :beagle)
+ObjectPropertyAssertion(:breedCoatType :beagle :shortHair)
+ObjectPropertyAssertion(:breedSize :beagle :medium)
+ObjectPropertyAssertion(:isPredisposedTo :beagle :obesity)
+
+# Individual: :beef (:beef)
+
+ClassAssertion(:ProteinSource :beef)
+
+# Individual: :beefAllergy (:beefAllergy)
+
+ClassAssertion(:FoodAllergy :beefAllergy)
+ObjectPropertyAssertion(:triggeredBy :beefAllergy :beef)
+
+# Individual: :britishShorthair (:britishShorthair)
+
+ClassAssertion(:CatBreed :britishShorthair)
+ObjectPropertyAssertion(:breedCoatType :britishShorthair :shortHair)
+ObjectPropertyAssertion(:isPredisposedTo :britishShorthair :obesity)
+
+# Individual: :carrot (:carrot)
+
+ClassAssertion(:VegetableAndFruit :carrot)
+
+# Individual: :cat_generic (:cat_generic)
+
+ClassAssertion(:Cat :cat_generic)
+
+# Individual: :chicken (:chicken)
+
+ClassAssertion(:ProteinSource :chicken)
+
+# Individual: :chickenAllergy (:chickenAllergy)
+
+ClassAssertion(:FoodAllergy :chickenAllergy)
+ObjectPropertyAssertion(:triggeredBy :chickenAllergy :chicken)
+
+# Individual: :corn (:corn)
+
+ClassAssertion(:Grain :corn)
+
+# Individual: :dentalPlaque (:dentalPlaque)
+
+ClassAssertion(:DentalCondition :dentalPlaque)
+
+# Individual: :dog_generic (:dog_generic)
+
+ClassAssertion(:Dog :dog_generic)
+
+# Individual: :drySkin (:drySkin)
+
+ClassAssertion(:SkinAndCoatCondition :drySkin)
+
+# Individual: :fishAllergy (:fishAllergy)
+
+ClassAssertion(:FoodAllergy :fishAllergy)
+ObjectPropertyAssertion(:triggeredBy :fishAllergy :salmon)
+
+# Individual: :goldenRetriever (:goldenRetriever)
+
+ClassAssertion(:DogBreed :goldenRetriever)
+ObjectPropertyAssertion(:breedCoatType :goldenRetriever :longHair)
+ObjectPropertyAssertion(:breedSize :goldenRetriever :large)
+ObjectPropertyAssertion(:isPredisposedTo :goldenRetriever :hipDysplasia)
+ObjectPropertyAssertion(:isPredisposedTo :goldenRetriever :skinAllergy)
+
+# Individual: :hairball (:hairball)
+
+ClassAssertion(:DigestiveCondition :hairball)
+
+# Individual: :highActivity (:highActivity)
+
+ClassAssertion(:ActivityLevel :highActivity)
+
+# Individual: :hipDysplasia (:hipDysplasia)
+
+ClassAssertion(:JointCondition :hipDysplasia)
+
+# Individual: :indoor (:indoor)
+
+ClassAssertion(:LivingEnvironment :indoor)
+
+# Individual: :intact (:intact)
+
+ClassAssertion(:NeuterStatus :intact)
+
+# Individual: :juvenile (:juvenile)
+
+ClassAssertion(:LifeStage :juvenile)
+
+# Individual: :kidneyDisease (:kidneyDisease)
+
+ClassAssertion(:UrinaryCondition :kidneyDisease)
+
+# Individual: :labrador (:labrador)
+
+ClassAssertion(:DogBreed :labrador)
+ObjectPropertyAssertion(:breedCoatType :labrador :shortHair)
+ObjectPropertyAssertion(:breedSize :labrador :large)
+ObjectPropertyAssertion(:isPredisposedTo :labrador :hipDysplasia)
+ObjectPropertyAssertion(:isPredisposedTo :labrador :obesity)
+
+# Individual: :lamb (:lamb)
+
+ClassAssertion(:ProteinSource :lamb)
+
+# Individual: :large (:large)
+
+ClassAssertion(:PetSize :large)
+
+# Individual: :longHair (:longHair)
+
+ClassAssertion(:CoatType :longHair)
+
+# Individual: :lowActivity (:lowActivity)
+
+ClassAssertion(:ActivityLevel :lowActivity)
+
+# Individual: :maineCoon (:maineCoon)
+
+ClassAssertion(:CatBreed :maineCoon)
+ObjectPropertyAssertion(:breedCoatType :maineCoon :longHair)
+ObjectPropertyAssertion(:isPredisposedTo :maineCoon :hipDysplasia)
+
+# Individual: :medium (:medium)
+
+ClassAssertion(:PetSize :medium)
+
+# Individual: :moderateActivity (:moderateActivity)
+
+ClassAssertion(:ActivityLevel :moderateActivity)
+
+# Individual: :neutered (:neutered)
+
+ClassAssertion(:NeuterStatus :neutered)
+
+# Individual: :obesity (:obesity)
+
+ClassAssertion(:WeightCondition :obesity)
+
+# Individual: :outdoor (:outdoor)
+
+ClassAssertion(:LivingEnvironment :outdoor)
+
+# Individual: :persian (:persian)
+
+ClassAssertion(:CatBreed :persian)
+ObjectPropertyAssertion(:breedCoatType :persian :longHair)
+ObjectPropertyAssertion(:isPredisposedTo :persian :hairball)
+ObjectPropertyAssertion(:isPredisposedTo :persian :kidneyDisease)
+
+# Individual: :pomeranian (:pomeranian)
+
+ClassAssertion(:DogBreed :pomeranian)
+ObjectPropertyAssertion(:breedCoatType :pomeranian :longHair)
+ObjectPropertyAssertion(:breedSize :pomeranian :small)
+ObjectPropertyAssertion(:isPredisposedTo :pomeranian :dentalPlaque)
+
+# Individual: :pumpkin (:pumpkin)
+
+ClassAssertion(:VegetableAndFruit :pumpkin)
+
+# Individual: :rice (:rice)
+
+ClassAssertion(:Grain :rice)
+
+# Individual: :salmon (:salmon)
+
+ClassAssertion(:ProteinSource :salmon)
+
+# Individual: :senior (:senior)
+
+ClassAssertion(:LifeStage :senior)
+
+# Individual: :sensitiveStomach (:sensitiveStomach)
+
+ClassAssertion(:DigestiveCondition :sensitiveStomach)
+
+# Individual: :shihTzu (:shihTzu)
+
+ClassAssertion(:DogBreed :shihTzu)
+ObjectPropertyAssertion(:breedCoatType :shihTzu :longHair)
+ObjectPropertyAssertion(:breedSize :shihTzu :small)
+ObjectPropertyAssertion(:isPredisposedTo :shihTzu :dentalPlaque)
+
+# Individual: :shortHair (:shortHair)
+
+ClassAssertion(:CoatType :shortHair)
+
+# Individual: :siamese (:siamese)
+
+ClassAssertion(:CatBreed :siamese)
+ObjectPropertyAssertion(:breedCoatType :siamese :shortHair)
+
+# Individual: :skinAllergy (:skinAllergy)
+
+ClassAssertion(:SkinAndCoatCondition :skinAllergy)
+
+# Individual: :small (:small)
+
+ClassAssertion(:PetSize :small)
+
+# Individual: :taurine (:taurine)
+
+ClassAssertion(:Additive :taurine)
+
+# Individual: :underweight (:underweight)
+
+ClassAssertion(:WeightCondition :underweight)
+
+# Individual: :urinaryStones (:urinaryStones)
+
+ClassAssertion(:UrinaryCondition :urinaryStones)
+
+# Individual: :wheat (:wheat)
+
+ClassAssertion(:Grain :wheat)
+
+# Individual: :wheatAllergy (:wheatAllergy)
+
+ClassAssertion(:FoodAllergy :wheatAllergy)
+ObjectPropertyAssertion(:triggeredBy :wheatAllergy :wheat)
+
+
+DisjointClasses(:ActivityLevel :LivingEnvironment :NeuterStatus)
+DisjointClasses(:Brand :HealthCondition :Ingredient :Person :Pet :Pet_characteristics :Product)
+DisjointClasses(:Breed :CoatType :LifeStage :Lifestyle :PetSize)
+DisjointClasses(:DentalCondition :DigestiveCondition :FoodAllergy :JointCondition :SkinAndCoatCondition :UrinaryCondition :WeightCondition)
+DifferentIndividuals(:adult :juvenile :senior)
+DifferentIndividuals(:highActivity :lowActivity :moderateActivity)
+DifferentIndividuals(:indoor :outdoor)
+DifferentIndividuals(:intact :neutered)
+DifferentIndividuals(:large :medium :small)
+DifferentIndividuals(:longHair :shortHair)
+DLSafeRule(Body(ClassAtom(:Cat Variable(<urn:swrl#p>)) ObjectPropertyAtom(:isSuitableFor Variable(<urn:swrl#x>) Variable(<urn:swrl#s>)) ClassAtom(:Cat Variable(<urn:swrl#s>)))Head(ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>))))
+DLSafeRule(Body(ClassAtom(:Cat Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasCoatType Variable(<urn:swrl#p>) :longHair) ObjectPropertyAtom(:hasLivingEnvironment Variable(<urn:swrl#p>) :indoor))Head(ObjectPropertyAtom(:hasRiskOf Variable(<urn:swrl#p>) :hairball)))
+DLSafeRule(Body(ClassAtom(:Cat Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasNeuterStatus Variable(<urn:swrl#p>) :intact) DataPropertyAtom(:hasRER Variable(<urn:swrl#p>) Variable(<urn:swrl#r>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#multiply> Variable(<urn:swrl#m>) Variable(<urn:swrl#r>) "1.4"^^xsd:decimal))Head(DataPropertyAtom(:hasDailyCalorieNeed Variable(<urn:swrl#p>) Variable(<urn:swrl#m>))))
+DLSafeRule(Body(ClassAtom(:Cat Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasNeuterStatus Variable(<urn:swrl#p>) :neutered) DataPropertyAtom(:hasRER Variable(<urn:swrl#p>) Variable(<urn:swrl#r>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#multiply> Variable(<urn:swrl#m>) Variable(<urn:swrl#r>) "1.2"^^xsd:decimal))Head(DataPropertyAtom(:hasDailyCalorieNeed Variable(<urn:swrl#p>) Variable(<urn:swrl#m>))))
+DLSafeRule(Body(ClassAtom(:Cat Variable(<urn:swrl#p>)) DataPropertyAtom(:hasAge Variable(<urn:swrl#p>) Variable(<urn:swrl#a>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> Variable(<urn:swrl#a>) "1"^^xsd:integer) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#lessThan> Variable(<urn:swrl#a>) "7"^^xsd:integer))Head(ObjectPropertyAtom(:hasLifeStage Variable(<urn:swrl#p>) :adult)))
+DLSafeRule(Body(ClassAtom(:Cat Variable(<urn:swrl#p>)) DataPropertyAtom(:hasAge Variable(<urn:swrl#p>) Variable(<urn:swrl#a>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> Variable(<urn:swrl#a>) "7"^^xsd:integer))Head(ObjectPropertyAtom(:hasLifeStage Variable(<urn:swrl#p>) :senior)))
+DLSafeRule(Body(ClassAtom(:Dog Variable(<urn:swrl#p>)) ObjectPropertyAtom(:isSuitableFor Variable(<urn:swrl#x>) Variable(<urn:swrl#s>)) ClassAtom(:Dog Variable(<urn:swrl#s>)))Head(ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>))))
+DLSafeRule(Body(ClassAtom(:Dog Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasNeuterStatus Variable(<urn:swrl#p>) :intact) DataPropertyAtom(:hasRER Variable(<urn:swrl#p>) Variable(<urn:swrl#r>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#multiply> Variable(<urn:swrl#m>) Variable(<urn:swrl#r>) "1.8"^^xsd:decimal))Head(DataPropertyAtom(:hasDailyCalorieNeed Variable(<urn:swrl#p>) Variable(<urn:swrl#m>))))
+DLSafeRule(Body(ClassAtom(:Dog Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasNeuterStatus Variable(<urn:swrl#p>) :neutered) DataPropertyAtom(:hasRER Variable(<urn:swrl#p>) Variable(<urn:swrl#r>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#multiply> Variable(<urn:swrl#m>) Variable(<urn:swrl#r>) "1.6"^^xsd:decimal))Head(DataPropertyAtom(:hasDailyCalorieNeed Variable(<urn:swrl#p>) Variable(<urn:swrl#m>))))
+DLSafeRule(Body(ClassAtom(:Dog Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasSize Variable(<urn:swrl#p>) :large) DataPropertyAtom(:hasAge Variable(<urn:swrl#p>) Variable(<urn:swrl#a>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> Variable(<urn:swrl#a>) "1"^^xsd:integer) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#lessThan> Variable(<urn:swrl#a>) "6"^^xsd:integer))Head(ObjectPropertyAtom(:hasLifeStage Variable(<urn:swrl#p>) :adult)))
+DLSafeRule(Body(ClassAtom(:Dog Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasSize Variable(<urn:swrl#p>) :large) DataPropertyAtom(:hasAge Variable(<urn:swrl#p>) Variable(<urn:swrl#a>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> Variable(<urn:swrl#a>) "6"^^xsd:integer))Head(ObjectPropertyAtom(:hasLifeStage Variable(<urn:swrl#p>) :senior)))
+DLSafeRule(Body(ClassAtom(:Dog Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasSize Variable(<urn:swrl#p>) :medium) DataPropertyAtom(:hasAge Variable(<urn:swrl#p>) Variable(<urn:swrl#a>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> Variable(<urn:swrl#a>) "1"^^xsd:integer) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#lessThan> Variable(<urn:swrl#a>) "7"^^xsd:integer))Head(ObjectPropertyAtom(:hasLifeStage Variable(<urn:swrl#p>) :adult)))
+DLSafeRule(Body(ClassAtom(:Dog Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasSize Variable(<urn:swrl#p>) :medium) DataPropertyAtom(:hasAge Variable(<urn:swrl#p>) Variable(<urn:swrl#a>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> Variable(<urn:swrl#a>) "7"^^xsd:integer))Head(ObjectPropertyAtom(:hasLifeStage Variable(<urn:swrl#p>) :senior)))
+DLSafeRule(Body(ClassAtom(:Dog Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasSize Variable(<urn:swrl#p>) :small) DataPropertyAtom(:hasAge Variable(<urn:swrl#p>) Variable(<urn:swrl#a>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> Variable(<urn:swrl#a>) "1"^^xsd:integer) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#lessThan> Variable(<urn:swrl#a>) "8"^^xsd:integer))Head(ObjectPropertyAtom(:hasLifeStage Variable(<urn:swrl#p>) :adult)))
+DLSafeRule(Body(ClassAtom(:Dog Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasSize Variable(<urn:swrl#p>) :small) DataPropertyAtom(:hasAge Variable(<urn:swrl#p>) Variable(<urn:swrl#a>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> Variable(<urn:swrl#a>) "8"^^xsd:integer))Head(ObjectPropertyAtom(:hasLifeStage Variable(<urn:swrl#p>) :senior)))
+DLSafeRule(Body(ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#f>) Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasCondition Variable(<urn:swrl#p>) Variable(<urn:swrl#a>)) ClassAtom(:FoodAllergy Variable(<urn:swrl#a>)) ObjectPropertyAtom(:triggeredBy Variable(<urn:swrl#a>) Variable(<urn:swrl#i>)) ObjectPropertyAtom(:hasIngredient Variable(<urn:swrl#f>) Variable(<urn:swrl#i>)))Head(ObjectPropertyAtom(:isUnsafeFor Variable(<urn:swrl#f>) Variable(<urn:swrl#p>))))
+DLSafeRule(Body(ClassAtom(:Pet Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasLivingEnvironment Variable(<urn:swrl#p>) :indoor) ObjectPropertyAtom(:hasNeuterStatus Variable(<urn:swrl#p>) :neutered) ObjectPropertyAtom(:hasActivityLevel Variable(<urn:swrl#p>) :lowActivity))Head(ObjectPropertyAtom(:hasRiskOf Variable(<urn:swrl#p>) :obesity)))
+DLSafeRule(Body(ClassAtom(:Pet Variable(<urn:swrl#p>)) DataPropertyAtom(:hasAge Variable(<urn:swrl#p>) Variable(<urn:swrl#a>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#lessThan> Variable(<urn:swrl#a>) "1"^^xsd:integer))Head(ObjectPropertyAtom(:hasLifeStage Variable(<urn:swrl#p>) :juvenile)))
+DLSafeRule(Body(ClassAtom(:Pet Variable(<urn:swrl#p>)) DataPropertyAtom(:hasBodyWeight Variable(<urn:swrl#p>) Variable(<urn:swrl#w>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#multiply> Variable(<urn:swrl#x>) Variable(<urn:swrl#w>) "30"^^xsd:integer) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#add> Variable(<urn:swrl#r>) Variable(<urn:swrl#x>) "70"^^xsd:integer))Head(DataPropertyAtom(:hasRER Variable(<urn:swrl#p>) Variable(<urn:swrl#r>))))
+DLSafeRule(Body(ClassAtom(:PetFood Variable(<urn:swrl#f>)) ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#f>) Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasLifeStage Variable(<urn:swrl#p>) Variable(<urn:swrl#l>)) ObjectPropertyAtom(:targetsLifeStage Variable(<urn:swrl#f>) Variable(<urn:swrl#l>)))Head(ObjectPropertyAtom(:matchesLifeStageOf Variable(<urn:swrl#f>) Variable(<urn:swrl#p>))))
+DLSafeRule(Body(ObjectPropertyAtom(:breedCoatType Variable(<urn:swrl#b>) Variable(<urn:swrl#c>)) ObjectPropertyAtom(:hasBreed Variable(<urn:swrl#p>) Variable(<urn:swrl#b>)))Head(ObjectPropertyAtom(:hasCoatType Variable(<urn:swrl#p>) Variable(<urn:swrl#c>))))
+DLSafeRule(Body(ObjectPropertyAtom(:breedSize Variable(<urn:swrl#b>) Variable(<urn:swrl#s>)) ObjectPropertyAtom(:hasBreed Variable(<urn:swrl#p>) Variable(<urn:swrl#b>)))Head(ObjectPropertyAtom(:hasSize Variable(<urn:swrl#p>) Variable(<urn:swrl#s>))))
+DLSafeRule(Body(ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasActivityLevel Variable(<urn:swrl#p>) Variable(<urn:swrl#v>)) ObjectPropertyAtom(:targetsLifestyle Variable(<urn:swrl#x>) Variable(<urn:swrl#v>)))Head(ObjectPropertyAtom(:matchesLifestyleOf Variable(<urn:swrl#x>) Variable(<urn:swrl#p>))))
+DLSafeRule(Body(ObjectPropertyAtom(:isPredisposedTo Variable(<urn:swrl#b>) Variable(<urn:swrl#c>)) ObjectPropertyAtom(:hasBreed Variable(<urn:swrl#p>) Variable(<urn:swrl#b>)))Head(ObjectPropertyAtom(:hasRiskOf Variable(<urn:swrl#p>) Variable(<urn:swrl#c>))))
+DLSafeRule(Body(ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasCondition Variable(<urn:swrl#p>) Variable(<urn:swrl#c>)) ObjectPropertyAtom(:isRecommendedFor Variable(<urn:swrl#x>) Variable(<urn:swrl#c>)))Head(ObjectPropertyAtom(:recommendedForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>))))
+DLSafeRule(Body(ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasLivingEnvironment Variable(<urn:swrl#p>) Variable(<urn:swrl#e>)) ObjectPropertyAtom(:targetsLifestyle Variable(<urn:swrl#x>) Variable(<urn:swrl#e>)))Head(ObjectPropertyAtom(:matchesLifestyleOf Variable(<urn:swrl#x>) Variable(<urn:swrl#p>))))
+DLSafeRule(Body(ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasNeuterStatus Variable(<urn:swrl#p>) Variable(<urn:swrl#n>)) ObjectPropertyAtom(:targetsLifestyle Variable(<urn:swrl#x>) Variable(<urn:swrl#n>)))Head(ObjectPropertyAtom(:matchesLifestyleOf Variable(<urn:swrl#x>) Variable(<urn:swrl#p>))))
+DLSafeRule(Body(ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasRiskOf Variable(<urn:swrl#p>) Variable(<urn:swrl#c>)) ObjectPropertyAtom(:isRecommendedFor Variable(<urn:swrl#x>) Variable(<urn:swrl#c>)))Head(ObjectPropertyAtom(:recommendedForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>))))
+)
