@@ -64,7 +64,6 @@ Declaration(Class(:WeightCondition))
 Declaration(Class(:WeightControlFood))
 Declaration(Class(:WetFood))
 Declaration(ObjectProperty(:breedCoatType))
-Declaration(ObjectProperty(:breedSize))
 Declaration(ObjectProperty(:goesWellWith))
 Declaration(ObjectProperty(:hasActivityLevel))
 Declaration(ObjectProperty(:hasBrand))
@@ -76,6 +75,7 @@ Declaration(ObjectProperty(:hasIngredient))
 Declaration(ObjectProperty(:hasLifeStage))
 Declaration(ObjectProperty(:hasLivingEnvironment))
 Declaration(ObjectProperty(:hasMainProtein))
+Declaration(ObjectProperty(:hasPetSize))
 Declaration(ObjectProperty(:hasRiskOf))
 Declaration(ObjectProperty(:hasSize))
 Declaration(ObjectProperty(:isOwnedBy))
@@ -185,12 +185,6 @@ FunctionalObjectProperty(:breedCoatType)
 ObjectPropertyDomain(:breedCoatType :Breed)
 ObjectPropertyRange(:breedCoatType :CoatType)
 
-# Object Property: :breedSize (:breedSize)
-
-FunctionalObjectProperty(:breedSize)
-ObjectPropertyDomain(:breedSize :Breed)
-ObjectPropertyRange(:breedSize :PetSize)
-
 # Object Property: :goesWellWith (:goesWellWith)
 
 SymmetricObjectProperty(:goesWellWith)
@@ -258,6 +252,12 @@ ObjectPropertyRange(:hasLivingEnvironment :LivingEnvironment)
 SubObjectPropertyOf(:hasMainProtein :hasIngredient)
 ObjectPropertyDomain(:hasMainProtein :PetFood)
 ObjectPropertyRange(:hasMainProtein :ProteinSource)
+
+# Object Property: :hasPetSize (:hasPetSize)
+
+FunctionalObjectProperty(:hasPetSize)
+ObjectPropertyDomain(:hasPetSize :Breed)
+ObjectPropertyRange(:hasPetSize :PetSize)
 
 # Object Property: :hasRiskOf (:hasRiskOf)
 
@@ -868,7 +868,7 @@ ClassAssertion(:JointCondition :arthritis)
 
 ClassAssertion(:DogBreed :beagle)
 ObjectPropertyAssertion(:breedCoatType :beagle :shortHair)
-ObjectPropertyAssertion(:breedSize :beagle :medium)
+ObjectPropertyAssertion(:hasPetSize :beagle :medium)
 ObjectPropertyAssertion(:isPredisposedTo :beagle :obesity)
 
 # Individual: :beef (:beef)
@@ -928,7 +928,7 @@ ObjectPropertyAssertion(:triggeredBy :fishAllergy :salmon)
 
 ClassAssertion(:DogBreed :goldenRetriever)
 ObjectPropertyAssertion(:breedCoatType :goldenRetriever :longHair)
-ObjectPropertyAssertion(:breedSize :goldenRetriever :large)
+ObjectPropertyAssertion(:hasPetSize :goldenRetriever :large)
 ObjectPropertyAssertion(:isPredisposedTo :goldenRetriever :hipDysplasia)
 ObjectPropertyAssertion(:isPredisposedTo :goldenRetriever :skinAllergy)
 
@@ -960,7 +960,7 @@ ClassAssertion(:UrinaryCondition :kidneyDisease)
 
 ClassAssertion(:DogBreed :labrador)
 ObjectPropertyAssertion(:breedCoatType :labrador :shortHair)
-ObjectPropertyAssertion(:breedSize :labrador :large)
+ObjectPropertyAssertion(:hasPetSize :labrador :large)
 ObjectPropertyAssertion(:isPredisposedTo :labrador :hipDysplasia)
 ObjectPropertyAssertion(:isPredisposedTo :labrador :obesity)
 
@@ -1017,7 +1017,7 @@ ObjectPropertyAssertion(:isPredisposedTo :persian :kidneyDisease)
 
 ClassAssertion(:DogBreed :pomeranian)
 ObjectPropertyAssertion(:breedCoatType :pomeranian :longHair)
-ObjectPropertyAssertion(:breedSize :pomeranian :small)
+ObjectPropertyAssertion(:hasPetSize :pomeranian :small)
 ObjectPropertyAssertion(:isPredisposedTo :pomeranian :dentalPlaque)
 
 # Individual: :pumpkin (:pumpkin)
@@ -1044,7 +1044,7 @@ ClassAssertion(:DigestiveCondition :sensitiveStomach)
 
 ClassAssertion(:DogBreed :shihTzu)
 ObjectPropertyAssertion(:breedCoatType :shihTzu :longHair)
-ObjectPropertyAssertion(:breedSize :shihTzu :small)
+ObjectPropertyAssertion(:hasPetSize :shihTzu :small)
 ObjectPropertyAssertion(:isPredisposedTo :shihTzu :dentalPlaque)
 
 # Individual: :shortHair (:shortHair)
@@ -1110,8 +1110,8 @@ DLSafeRule(Body(ClassAtom(:Pet Variable(<urn:swrl#p>)) DataPropertyAtom(:hasAge 
 DLSafeRule(Body(ClassAtom(:Pet Variable(<urn:swrl#p>)) DataPropertyAtom(:hasBodyWeight Variable(<urn:swrl#p>) Variable(<urn:swrl#w>)) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#multiply> Variable(<urn:swrl#x>) Variable(<urn:swrl#w>) "30"^^xsd:integer) BuiltInAtom(<http://www.w3.org/2003/11/swrlb#add> Variable(<urn:swrl#r>) Variable(<urn:swrl#x>) "70"^^xsd:integer))Head(DataPropertyAtom(:hasRER Variable(<urn:swrl#p>) Variable(<urn:swrl#r>))))
 DLSafeRule(Body(ClassAtom(:PetFood Variable(<urn:swrl#f>)) ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#f>) Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasLifeStage Variable(<urn:swrl#p>) Variable(<urn:swrl#l>)) ObjectPropertyAtom(:targetsLifeStage Variable(<urn:swrl#f>) Variable(<urn:swrl#l>)))Head(ObjectPropertyAtom(:matchesLifeStageOf Variable(<urn:swrl#f>) Variable(<urn:swrl#p>))))
 DLSafeRule(Body(ObjectPropertyAtom(:hasBreed Variable(<urn:swrl#p>) Variable(<urn:swrl#b>)) ObjectPropertyAtom(:breedCoatType Variable(<urn:swrl#b>) Variable(<urn:swrl#c>)))Head(ObjectPropertyAtom(:hasCoatType Variable(<urn:swrl#p>) Variable(<urn:swrl#c>))))
-DLSafeRule(Body(ObjectPropertyAtom(:hasBreed Variable(<urn:swrl#p>) Variable(<urn:swrl#b>)) ObjectPropertyAtom(:breedSize Variable(<urn:swrl#b>) Variable(<urn:swrl#s>)))Head(ObjectPropertyAtom(:hasSize Variable(<urn:swrl#p>) Variable(<urn:swrl#s>))))
 DLSafeRule(Body(ObjectPropertyAtom(:targetsLifeStyle Variable(<urn:swrl#x>) Variable(<urn:swrl#v>)) ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasActivityLevel Variable(<urn:swrl#p>) Variable(<urn:swrl#v>)))Head(ObjectPropertyAtom(:matchesLifestyleOf Variable(<urn:swrl#x>) Variable(<urn:swrl#p>))))
+DLSafeRule(Body(ObjectPropertyAtom(:hasPetSize Variable(<urn:swrl#b>) Variable(<urn:swrl#s>)) ObjectPropertyAtom(:hasBreed Variable(<urn:swrl#p>) Variable(<urn:swrl#b>)))Head(ObjectPropertyAtom(:hasSize Variable(<urn:swrl#p>) Variable(<urn:swrl#s>))))
 DLSafeRule(Body(ObjectPropertyAtom(:hasBreed Variable(<urn:swrl#p>) Variable(<urn:swrl#b>)) ObjectPropertyAtom(:isPredisposedTo Variable(<urn:swrl#b>) Variable(<urn:swrl#c>)))Head(ObjectPropertyAtom(:hasRiskOf Variable(<urn:swrl#p>) Variable(<urn:swrl#c>))))
 DLSafeRule(Body(ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasCondition Variable(<urn:swrl#p>) Variable(<urn:swrl#c>)) ObjectPropertyAtom(:isRecommendedFor Variable(<urn:swrl#x>) Variable(<urn:swrl#c>)))Head(ObjectPropertyAtom(:recommendedForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>))))
 DLSafeRule(Body(ObjectPropertyAtom(:targetsLifeStyle Variable(<urn:swrl#x>) Variable(<urn:swrl#e>)) ObjectPropertyAtom(:isSuitableForPet Variable(<urn:swrl#x>) Variable(<urn:swrl#p>)) ObjectPropertyAtom(:hasLivingEnvironment Variable(<urn:swrl#p>) Variable(<urn:swrl#e>)))Head(ObjectPropertyAtom(:matchesLifestyleOf Variable(<urn:swrl#x>) Variable(<urn:swrl#p>))))
