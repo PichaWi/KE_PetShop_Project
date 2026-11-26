@@ -13,10 +13,10 @@ Out of scope: other animals, veterinary diagnosis and treatment, live-animal sal
 | Item | Count |
 |---|---|
 | Classes | 53 (5 defined classes) |
-| Object properties | 29 (6 inferred only) |
-| Data properties | 10 (2 inferred only) |
+| Object properties | 27 (6 inferred only) |
+| Data properties | 11 (2 inferred only) |
 | SWRL rules | 28 |
-| Individuals | 70 (value individuals + sample data) |
+| Individuals | 71 (value individuals + sample data) |
 
 ## Class hierarchy
 
@@ -33,7 +33,7 @@ owl:Thing
 ├── Pet_characteristics
 │   ├── LifeStage, PetSize, CoatType
 │   ├── Breed ── CatBreed, DogBreed
-│   └── Lifestyle ── LivingEnvironment, ActivityLevel, NeuterStatus
+│   └── Lifestyle ── LivingEnvironment, ActivityLevel
 ├── HealthCondition
 │   └── FoodAllergy, DigestiveCondition, WeightCondition, SkinAndCoatCondition,
 │       UrinaryCondition, JointCondition, DentalCondition
@@ -53,7 +53,6 @@ Health conditions and pet characteristics are modeled as **individuals** inside 
 3. Which products are recommended for a specific health condition?
 4. Which products are suitable for both dogs and cats?
 5. Which products of a specific brand cost less than a given price?
-6. Which pet foods do not contain a specific ingredient?
 
 **Complex** (need SWRL rules to infer new knowledge before the query can answer)
 

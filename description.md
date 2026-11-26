@@ -136,8 +136,10 @@ All seven subclasses are mutually disjoint. The conditions themselves are indivi
 
 | Class | Description |
 |---|---|
+| Staff | Person who is working in pet shop |
 | StoreManager | Manages the shop, product range and staff |
 | Cashier | Handles payment and sales at the counter |
+| Customer | Person who come to use services |
 
 ### 3.8 Defined classes
 
@@ -164,9 +166,8 @@ Each group is declared `DifferentIndividuals`, so two values in the same group c
 | LifeStage | juvenile, adult, senior |
 | PetSize | small, medium, large |
 | CoatType | shortHair, longHair |
-| LivingEnvironment | indoor, outdoor |
+| LivingEnvironment | indoor, outdoor, mixedEnvironment |
 | ActivityLevel | lowActivity, moderateActivity, highActivity |
-| NeuterStatus | neutered, intact |
 
 ### 4.2 Health conditions
 
@@ -214,6 +215,12 @@ Each group is declared `DifferentIndividuals`, so two values in the same group c
 | cat_generic | Cat | Species reference used by `isSuitableFor` on products |
 | dog_generic | Dog | Species reference used by `isSuitableFor` on products |
 
+### 4.6 Person names
+
+| Class | Individual |
+|---|---|
+| Customer | Nida, Somchai |
+
 ---
 
 ## 5. Object properties
@@ -222,7 +229,7 @@ Each group is declared `DifferentIndividuals`, so two values in the same group c
 
 | Property | Domain | Range | Characteristics | Description |
 |---|---|---|---|---|
-| isSuitableFor | Product | Pet | | Species the product is designed for |
+| isSuitableForPet | Product | Pet | | Species the product is designed for |
 | hasBrand | Product | Brand | Functional | Brand that makes the product |
 | goesWellWith | Product | Product | Symmetric | Products sold or used together |
 | isRecommendedFor | Product | HealthCondition | | Condition the product helps manage |
@@ -244,7 +251,6 @@ Each group is declared `DifferentIndividuals`, so two values in the same group c
 | hasBreed | Pet | Breed | Functional, sub-property of hasCharacteristic | Breed of the pet |
 | hasLivingEnvironment | Pet | LivingEnvironment | Functional, sub-property of hasCharacteristic | Indoor or outdoor |
 | hasActivityLevel | Pet | ActivityLevel | Functional, sub-property of hasCharacteristic | Activity level |
-| hasNeuterStatus | Pet | NeuterStatus | Functional, sub-property of hasCharacteristic | Neutered or intact |
 | hasCondition | Pet | HealthCondition | | A diagnosed condition, including food allergies |
 
 ### 5.3 Knowledge properties
@@ -252,7 +258,7 @@ Each group is declared `DifferentIndividuals`, so two values in the same group c
 | Property | Domain | Range | Description |
 |---|---|---|---|
 | breedCoatType | Breed | CoatType | Typical coat of the breed |
-| breedSize | DogBreed | PetSize | Typical size of the dog breed |
+| breedSize | Breed | PetSize | Typical size of the dog breed |
 | isPredisposedTo | Breed | HealthCondition | Conditions the breed is prone to |
 | triggeredBy | FoodAllergy | Ingredient | Ingredient that causes the allergy |
 
@@ -263,7 +269,6 @@ These are filled by SWRL rules and must never be asserted by hand.
 | Property | Domain | Range | Filled by | Meaning |
 |---|---|---|---|---|
 | hasRiskOf | Pet | HealthCondition | R3 | Pet is at risk of the condition |
-| isSuitableForPet | Product | Pet | R4 | Product matches the pet's species |
 | matchesLifeStageOf | PetFood | Pet | R5 | Food targets the pet's current life stage |
 | matchesLifestyleOf | Product | Pet | R5 | Product targets the pet's environment, activity or neuter status |
 | recommendedForPet | Product | Pet | R6 | Product addresses a condition or risk of the pet |
@@ -285,6 +290,7 @@ These are filled by SWRL rules and must never be asserted by hand.
 | hasBodyWeight | Pet | xsd:decimal | Functional | Pet's body weight in kg |
 | hasRER | Pet | xsd:decimal | Inferred only | Resting energy requirement in kcal per day |
 | hasDailyCalorieNeed | Pet | xsd:decimal | Inferred only | Daily energy requirement in kcal per day |
+| hasNeuterStatus | Pet | xsd:boolean | | True if pet is neutered |
 
 ---
 
@@ -503,14 +509,6 @@ SELECT DISTINCT ?product ?price WHERE {
 | LightDogChickenWet | 75 |
 | DeSheddingBrush | 290 |
 
-**S6. Which pet foods do not contain a specific ingredient?**
-
-```sparql
-SELECT DISTINCT ?food WHERE {
-  ?food a :PetFood .
-  FILTER NOT EXISTS { ?food :hasIngredient :chicken }
-}
-```
 
 Result: AdultDogLambGrainFree, KittenSalmonDry, LargeDogBeefDry, SeniorCatSalmonDry
 
